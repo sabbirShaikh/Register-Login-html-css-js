@@ -58,6 +58,10 @@ signBtn.addEventListener("click", (event) => {
         errorMsg.innerText = `* This email is already taken, try another...`
         errorMsg.style.color = "red"
         emailInp.focus()
+
+        setTimeout(() => {
+            errorMsg.innerText = ""
+        }, 3000);
     } else {
         signBtn.innerText = "Please Wait..."
         setTimeout(() => {
@@ -67,11 +71,14 @@ signBtn.addEventListener("click", (event) => {
             errorMsg.innerText = `* Hey ${name}, You have registered successfully!`
             signBtn.innerText = "Signup"
             signupForm.reset();
-            
+
             errors = []
             message.textContent = "";
             message.className = "";
             signBtn.disabled = true;
+            setTimeout(() => {
+                errorMsg.innerText = ""
+            }, 3000);
         }, 2000);
     }
 })

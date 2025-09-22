@@ -1,65 +1,85 @@
-/* Reset and base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background: #f5f6fa; /* consistent with login/signup */
+/* Profile Page Layout */
+.profile-container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  color: #333;
+  background: #f5f6fa;
 }
 
-/* Container */
-.form-container {
-  background: #fafafa; /* soft grey card */
-  padding: 2rem 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+.profile-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
+  max-width: 420px;
   text-align: center;
   animation: fadeIn 0.6s ease-in-out;
 }
 
+/* Avatar Circle */
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6c63ff, #48c6ef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 #msg {
-  font-size: 1.3rem;
-  color: #444;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.sub-msg {
+  font-size: 1rem;
+  color: #666;
   margin-bottom: 2rem;
 }
 
-/* Button */
-.submitBtn {
-  padding: 0.85rem 2rem;
-  border: none;
-  border-radius: 8px;
-  background: #e74c3c; /* red logout button */
-  color: #fff;
+/* Logout Button */
+/* Logout Button - Modern Style */
+.logoutBtn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 18px;
   font-size: 1rem;
   font-weight: 600;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.1s ease;
+  background: linear-gradient(135deg, #ff6a6a, #d64545);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255, 99, 71, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 
-.submitBtn:hover {
-  background: #c0392b;
-  transform: translateY(-1px);
+.logoutBtn:hover {
+  background: linear-gradient(135deg, #ff5252, #c0392b);
+  box-shadow: 0 6px 14px rgba(192, 57, 43, 0.35);
+  transform: translateY(-2px);
 }
 
-.submitBtn:active {
-  transform: translateY(1px);
+.logoutBtn:active {
+  transform: scale(0.97);
 }
 
-/* Animation */
+
+/* Fade In */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
   to {
     opacity: 1;

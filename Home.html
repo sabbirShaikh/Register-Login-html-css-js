@@ -7,16 +7,26 @@
     <link rel="stylesheet" href="style3.css" />
   </head>
   <body>
-    <div class="form-container">
-      <h1 id="msg"></h1>
-      <button class="submitBtn" style="background-color: red">Logout</button>
+    <div class="profile-container">
+      <div class="profile-card">
+        <div class="avatar">
+          <span id="avatarLetter">U</span>
+        </div>
+        <h1 id="msg"></h1>
+        <p class="sub-msg">Welcome back! You’re successfully logged in.</p>
+        <button class="submitBtn logoutBtn">Logout</button>
+      </div>
     </div>
+
     <script>
       let msg = document.getElementById("msg");
-      let logoutBtn = document.querySelector(".submitBtn");
+      let avatarLetter = document.getElementById("avatarLetter");
+      let logoutBtn = document.querySelector(".logoutBtn");
 
-      let loginUser = localStorage.getItem("loginUser");
-      msg.innerText = `Hey ${loginUser}, you have logged in successfully...`;
+      let loginUser = localStorage.getItem("loginUser") || "User";
+
+      msg.innerText = `Hey ${loginUser}`;
+      avatarLetter.innerText = loginUser.charAt(0).toUpperCase();
 
       logoutBtn.addEventListener("click", () => {
         window.location.href = "./Login.html";
