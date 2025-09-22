@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup-page</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="" id="formSubmit">
+        <label for="name"
+          >Name :
+          <input type="text" name="name" id="nameInp" class="simInp" required />
+        </label>
+        <label for="name"
+          >Email :
+          <input
+            type="email"
+            name="email"
+            id="emailInp"
+            class="simInp"
+            autocomplete="new-password"
+            required
+          />
+        </label>
+        <label for="age"
+          >Password :
+          <input
+            type="password"
+            name="password"
+            id="passInp"
+            class="simInp"
+            autocomplete="new-password"
+            required
+          />
+        </label>
+        <div id="message" class="error"></div>
+        <div>
+          <h4>Password must contain :</h4>
+          <ul>
+            <li>At least 8 characters.</li>
+            <li>At least 1 uppercase letter.</li>
+            <li>At least 1 lowercase letter.</li>
+            <li>At least 1 number.</li>
+            <li>At least 1 special character.</li>
+          </ul>
+        </div>
+        <div class="btndiv">
+          <button type="submit" class="submitBtn" disabled>Signup</button>
+        </div>
+      </form>
+      <h3>Go to <a href="Login.html">Login page</a></h3>
+      <p id="error"></p>
+    </div>
+    <script src="signupScript.js"></script>
+  </body>
+</html>

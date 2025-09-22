@@ -1,0 +1,68 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f6fa; /* consistent with login/signup */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container */
+.form-container {
+  background: #fafafa; /* soft grey card */
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+#msg {
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.submitBtn {
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: #e74c3c; /* red logout button */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.submitBtn:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.submitBtn:active {
+  transform: translateY(1px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
